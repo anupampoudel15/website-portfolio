@@ -73,7 +73,7 @@ document.addEventListener('visibilitychange',
 var typed = new Typed(".typing-text", {
     strings: [" Elegant!", " Efficient!", " Happen!"],
     loop: true,
-    typeSpeed: 50,
+    typeSpeed: 25,
     backSpeed: 25,
     backDelay: 500,
 });
