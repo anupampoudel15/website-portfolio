@@ -73,8 +73,8 @@ document.addEventListener('visibilitychange',
 var typed = new Typed(".typing-text", {
     strings: [" Elegant!", " Efficient!", " Happen!"],
     loop: true,
-    typeSpeed: 25,
-    backSpeed: 25,
+    typeSpeed: 75,
+    backSpeed: 50,
     backDelay: 500,
 });
 // <!-- typed js effect ends -->
