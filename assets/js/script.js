@@ -29,51 +29,29 @@ $(document).ready(function () {
         });
     });
 
-// Initialize EmailJS
-(function() {
-    emailjs.init("Kb8XSzUEwJvApkJeD"); // Replace '**your_user_id**' with your actual User ID from EmailJS
-})();
+    // smooth scrolling
+    $('a[href*="#"]').on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top,
+        }, 500, 'linear')
+    });
 
-// Handle the contact form submission
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the form from submitting normally
-    
-    var form = event.target;
+    // <!-- emailjs to mail contact form data -->
+    $("#contact-form").submit(function (event) {
+        emailjs.init("user_TTDmetQLYgWCLzHTDgqxm");
 
-    // Send the form data to EmailJS
-    emailjs.sendForm('service_10395al', 'template_l3kvdad', form)
-        .then(function(response) {
-            alert('Your message has been sent successfully!');
-            form.reset(); // Reset form after successful submission
-        }, function(error) {
-            alert('Failed to send your message. Please try again.');
-        });
-});
-
-// Smooth scrolling
-$('a[href*="#"]').on('click', function (e) {
-    e.preventDefault();
-    $('html, body').animate({
-        scrollTop: $($(this).attr('href')).offset().top,
-    }, 500, 'linear')
-});
-
-// EmailJS to mail contact form data
-$("#contact-form").submit(function (event) {
-    emailjs.init("Kb8XSzUEwJvApkJeD"); // Replace '**your_user_id**' with your actual User ID from EmailJS
-
-    emailjs.sendForm('service_10395al', 'emplate_l3kvdad', '#contact-form')
-        .then(function (response) {
-            console.log('SUCCESS!', response.status, response.text);
-            document.getElementById("contact-form").reset();
-            alert("Form Submitted Successfully");
-        }, function (error) {
-            console.log('FAILED...', error);
-            alert("Form Submission Failed! Try Again");
-        });
-    event.preventDefault();
-});
-
+        emailjs.sendForm('contact_service', 'template_contact', '#contact-form')
+            .then(function (response) {
+                console.log('SUCCESS!', response.status, response.text);
+                document.getElementById("contact-form").reset();
+                alert("Form Submitted Successfully");
+            }, function (error) {
+                console.log('FAILED...', error);
+                alert("Form Submission Failed! Try Again");
+            });
+        event.preventDefault();
+    });
     // <!-- emailjs to mail contact form data -->
 
 });
