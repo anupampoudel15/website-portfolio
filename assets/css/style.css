@@ -376,7 +376,8 @@ header .navbar ul li a:hover {
 .about .row .content h3 {
   color: rgb(27, 27, 27);
   font-size: 2.5rem;
-  font-family: 'KoHo', sans-serif;;
+  justify-content: center;
+  font-family: 'KoHo', sans-serif;
 }
 .about .row .content .tag {
   font-size: 1.4rem;
@@ -1089,7 +1090,7 @@ form .button-area {
 .footer {
   min-height: auto;
   padding-top: 0;
-  background: rgb(0, 1, 43);
+  background: #2F2F2F;
 }
 .footer .box-container {
   display: flex;
@@ -1103,8 +1104,9 @@ form .button-area {
 .footer .box-container .box h3 {
   font-size: 2.5rem;
   color: #fff;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   font-weight: normal;
+  font-family: 'KoHo', sans-serif;
 }
 .footer .box-container .box p {
   font-size: 1.5rem;
@@ -1159,7 +1161,7 @@ form .button-area {
   border-top: 0.1rem solid #fff3;
 }
 .footer .credit a {
-  color: #ffae00;
+  color:#D0CAEA ;
 }
 .footer .fa {
   color: #e90606;
@@ -1211,8 +1213,8 @@ form .button-area {
   right: 2rem;
   padding: 1rem 1.5rem;
   font-size: 2rem;
-  background: #ffae00;
-  color: rgb(13, 0, 44);
+  background: #2506ad;
+  color: #ffffff;
   border-radius: 50%;
   transition: 1s linear;
   z-index: 1000;
@@ -1227,3 +1229,51 @@ form .button-area {
     font-size: 0.5rem;
 
 }
+.footer .box .footerdemo{
+text-align: center;
+}
+
+  .input-container {
+            display: flex;
+            align-items: center;
+            background-color: #FFFFFF;
+            border-radius: 50px; /* Rounded corners */
+            padding: 5px 15px;
+            max-width: 500px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Input field styling */
+        .input-container input {
+            border: none;
+            outline: none;
+            flex: 1;
+            font-size: 20px;
+            color: #888888;
+        }
+
+        /* Button styling */
+        .input-container button {
+            background-color: #6C6C6C; /* Gray background for the button */
+            border: none;
+            color: #FFFFFF;
+            border-radius: 50%; /* Make it circular */
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .input-container button:hover {
+            background-color: #555555; /* Darker gray on hover */
+        }
+
+        /* Arrow styling */
+        .input-container button::after {
+            content: '→'; /* Unicode arrow character */
+            font-size: 24px;
+            font-weight: bold;
+        }
