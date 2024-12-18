@@ -1232,48 +1232,77 @@ form .button-area {
 .footer .box .footerdemo{
 text-align: center;
 }
+/* Input Container Styling */
+.input-container {
+  max-width: 600px; /* Restrict form width */
+  margin: 0 auto; /* Center the form */
+  background-color: #2F2F2F; /* Dark background */
+  padding: 20px;
+  border-radius: 5px; /* Rounded corners */
+  color: #fff; /* White text */
+  font-family: Arial, sans-serif;
+}
 
-  .input-container {
-            display: flex;
-            align-items: center;
-            background-color: #FFFFFF;
-            border-radius: 50px; /* Rounded corners */
-            padding: 5px 15px;
-            max-width: 500px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+/* Section Header Styling */
+.input-container h2 {
+  font-size: 18px;
+  font-weight: bold;
+  
+  text-transform: uppercase;margin-bottom: 10px;
+  letter-spacing: 1px;
+}
 
-        /* Input field styling */
-        .input-container input {
-            border: none;
-            outline: none;
-            flex: 1;
-            font-size: 20px;
-            color: #888888;
-        }
+.input-container h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: #e63946; /* Red line under header */
+  margin-top: 5px;
+}
 
-        /* Button styling */
-        .input-container button {
-            background-color: #6C6C6C; /* Gray background for the button */
-            border: none;
-            color: #FFFFFF;
-            border-radius: 50%; /* Make it circular */
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+/* Form Elements Styling */
+.input-container input,
+.input-container textarea {
+  width: 100%;
+  background-color: #ffffff; /* Input background */
+  color: #2b2b2b; /* White text */
+  border: 1px solid #2F2F2F; /* Darker border */
+  padding: 10px 12px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  border-radius: 3px; /* Slightly rounded corners */
+  box-sizing: border-box;
+  transition: border 0.3s ease-in-out;
+}
 
-        .input-container button:hover {
-            background-color: #555555; /* Darker gray on hover */
-        }
+.input-container input:focus,
+.input-container textarea:focus {
+  outline: none;
+  border-color: #e63946; /* Red border focus */
+}
 
-        /* Arrow styling */
-        .input-container button::after {
-            content: '→'; /* Unicode arrow character */
-            font-size: 24px;
-            font-weight: bold;
-        }
+/* Textarea Styling */
+.input-container textarea {
+  resize: none;
+  height: 60px; /* Set height for textarea */
+}
+
+/* Submit Button Styling */
+.input-container button {
+  background-color: #ffae00; /* Red button background */
+  color: #fff; /* White text */
+  border: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 3px; /* Rounded corners */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.input-container button:hover {
+  background-color: #b52c36; /* Darker red on hover */
+}
+
