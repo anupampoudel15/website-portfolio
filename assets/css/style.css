@@ -40,7 +40,7 @@ html::-webkit-scrollbar-thumb {
   background: #420177;
 }
 
-/* navbar */
+/* ========== NAVBAR ========== */
 header {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -120,12 +120,52 @@ header .navbar ul li a:hover {
   padding: 1rem 0;
 }
 
-.home .socials {
+/* ========== SOCIAL ICONS ========== */
+.socials {
   display: flex;
-  gap: 15px;
-  margin-top: 2rem;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1rem;
 }
 
+.socials .social-icons {
+  list-style: none;
+  display: flex; /* Keep them in a row */
+  gap: 15px;
+}
+
+.socials .social-icons li {
+  display: inline-block;
+}
+
+.social-icons a {
+  font-size: 2rem;
+  display: inline-block;
+  line-height: 44px;
+  color: #ffffff;
+  background-color: #2F2F2F;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  border-radius: 100%;
+  transition: all 0.2s linear;
+}
+
+
+.social-icons a.linkedin:hover {
+  background-color: #007bb6;
+}
+.social-icons a.github:hover {
+  background-color: #0e0e0e;
+}
+.social-icons a.instagram:hover {
+  background-color: #ee00da;
+}
+.social-icons a.mail:hover {
+  background-color: #ff4500;
+}
+
+/* ========== HERO IMAGE ========== */
 .home .image {
   flex: 1 1 50%;
   max-width: 50%;
@@ -139,68 +179,51 @@ header .navbar ul li a:hover {
   height: auto;
 }
 
-/* ========== RESPONSIVE FIX (Hero Section) ========== */
+/* ========== RESPONSIVE FIXES ========== */
 @media (max-width: 768px) {
     .home {
-        flex-direction: row; /* Keep side-by-side */
+        flex-direction: column; /* Stack image below text */
         align-items: center;
-        justify-content: space-between;
+        text-align: center;
     }
 
     .home .content {
-        flex: 1;
-        max-width: 50%;
+        max-width: 90%;
     }
 
     .home .image {
-        flex: 1;
+        width: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
-        max-width: 50%;
+        margin-top: 2rem;
     }
 
     .home .image img {
-        width: 100%;
-        max-width: 220px;
+        width: 80%;
+        max-width: 300px; /* Scale down for mobile */
         height: auto;
     }
 
-    .home .content h2 {
-        font-size: 3rem;
+   
+    .socials {
+        justify-content: center;
     }
 
-    .home .content p {
-        font-size: 1.5rem;
-    }
-
-    .home .socials {
-        justify-content: flex-start;
-        margin-top: 1rem;
+    .socials .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
     }
 }
 
 /* Small mobile screens (below 480px) */
 @media (max-width: 480px) {
-    .home {
-        flex-direction: column; /* Stack image below text */
-        text-align: center;
-    }
-
-    .home .content {
-        max-width: 100%;
-    }
-
-    .home .image {
-        max-width: 100%;
-    }
-
     .home .image img {
-        max-width: 180px;
+        max-width: 250px; /* Further scale image */
     }
 }
 
-/* Footer */
+/* ========== FOOTER ========== */
 .footer {
   background: #2F2F2F;
 }
@@ -216,7 +239,7 @@ header .navbar ul li a:hover {
   color: #D0CAEA;
 }
 
-/* Scroll Top */
+/* ========== SCROLL TO TOP ========== */
 #scroll-top {
   position: fixed;
   top: -140%;
