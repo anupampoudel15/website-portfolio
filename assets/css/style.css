@@ -173,6 +173,13 @@ header .navbar ul li a:hover {
     right: 0;
   }
 }
+
+@media (max-width: 450px) {
+    .home .image img {
+        margin-top: 0rem;
+        margin-left: auto;
+    }
+}
 /* hamburger icon ends */
 
 /* hero section starts*/
